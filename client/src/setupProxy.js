@@ -5,6 +5,7 @@ module.exports = function(app) {
     {   changeOrigin: true,
         target: 'http://localhost:5000/' }
     ));
+    
     app.use(proxy('/api/*', 
         {   changeOrigin: true,
             target: 'http://localhost:5000/' }

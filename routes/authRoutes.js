@@ -1,4 +1,5 @@
 const passport = require('passport');
+const keys = require('../config/keys');
 
 
 module.exports = (app)=>{
@@ -12,7 +13,7 @@ module.exports = (app)=>{
             '/auth/google/callback',
             passport.authenticate('google'),
         (req,res) => {
-            res.redirect('/surveys');
+            res.redirect(keys.redirectDomain+'/surveys');
         });
 
     
